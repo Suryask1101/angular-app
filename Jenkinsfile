@@ -7,8 +7,7 @@ pipeline {
 		            sh 'npm install'
                 sh 'echo N | ng analytics off'
                 sh 'ng build'
-                sh 'cd /var/lib/jenkins/workspace/demo/dist/angular-app'
-                sh 'ls && pwd'
+                sh 'cd /var/lib/jenkins/workspace/demo/dist/angular-app && ls && pwd'
 		            sh 'zip -r build.zip browser'
             }
         }
