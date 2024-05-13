@@ -13,7 +13,7 @@ pipeline {
         }
         stage('S3 Upload') {
             steps {
-                with AWS(region: 'us-east-1', credentials: 'b478d5f4-f5c6-44e1-9892-5fd3916d0a96') {
+                withAWS(region: 'us-east-1', credentials: 'b478d5f4-f5c6-44e1-9892-5fd3916d0a96') {
                     sh 'ls -la'
                     sh 'aws s3 cp build.zip s3://jensk-1/'
                 }
