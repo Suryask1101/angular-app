@@ -3,6 +3,8 @@ pipeline {
     stages {
         stage('Build') {
             steps {
+                sh 'npm install'
+                sh 'ng build'
                 sh 'ls'
                 sh 'cd dist'
                 sh 'cd angular-app'
