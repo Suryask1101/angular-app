@@ -4,7 +4,6 @@ pipeline {
         stage('Build') {
             steps {
                 sh 'ls'
-		            sh 'cd angular-app'
                 sh 'cd ng build'
                 sh 'cd dist'
                 sh 'cd angular-app'
