@@ -5,7 +5,7 @@ pipeline {
             steps {
                 sh 'ls'
 		            sh 'cd angular-app'
-                sh 'cd dist\angular-app'
+                sh 'cd dist/angular-app'
                 sh 'ls'
                 sh 'cd browser'
 		            sh 'zip -r browser.zip browser'
