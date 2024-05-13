@@ -7,8 +7,8 @@ pipeline {
 		            sh 'npm install'
                 sh 'echo N | ng analytics off'
                 sh 'ng build'
-                sh 'cd dist/angular-app && ls && pwd'
-		            sh 'zip -r build.zip browser'
+                sh 'cd dist/angular-app && ls'
+		            sh 'zip -r build.zip dist/angular-app/browser'
             }
         }
         stage('S3 Upload') {
