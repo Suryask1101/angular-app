@@ -6,7 +6,7 @@ pipeline {
                 sh 'ls'
                 sh 'cd dist'
                 sh 'cd angular-app'
-                sh 'cd browser'
+                sh 'ls'
 		            sh 'zip -r browser.zip browser'
             }
         }
