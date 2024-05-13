@@ -13,7 +13,7 @@ pipeline {
         }
         stage('S3 Upload') {
             steps {
-                with AWS(region: 'us-east-1', credentials: 'da5fea22-4d26-4fb9-b524-85eb92f705d5') {
+                with AWS(region: 'us-east-1', credentials: 'b478d5f4-f5c6-44e1-9892-5fd3916d0a96') {
                     sh 'ls -la'
                     sh 'aws s3 cp build.zip s3://sk-jenkins-angular/'
                 }
