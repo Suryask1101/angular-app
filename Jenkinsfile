@@ -4,8 +4,8 @@ pipeline {
         stage('Build') {
             steps {
                 sh 'ls'
-                sh 'cd dist'
-                sh 'cd angular-app'
+                sh 'cd /dist'
+                sh 'cd /angular-app'
                 sh 'ls'
 		            sh 'zip -r browser.zip browser'
             }
