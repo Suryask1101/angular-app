@@ -24,7 +24,7 @@ pipeline {
         stage('Deploy with CodeDeploy') {
             steps {
                 sh 'aws deploy create-deployment --application-name sk-angular \
-                    --deployment-group-name test-angular \
+                    --deployment-group-name angular-jenkins \
                     --s3-location bucket=jensk-1,key=build.zip,bundleType=zip'
             }
         }
