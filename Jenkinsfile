@@ -10,7 +10,7 @@ pipeline {
                 sh 'cp appspec.yml dist/angular-app/browser'
                 sh 'cp -r scripts dist/angular-app/browser'
                 sh 'cd dist/angular-app/browser && ls'
-                sh 'zip -r build.zip browser'
+                sh 'zip -rj build.zip dist/angular-app/browser/*'
             }
         }
         stage('S3 Upload') {
