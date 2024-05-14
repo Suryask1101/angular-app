@@ -8,7 +8,7 @@ pipeline {
                 sh 'echo N | ng analytics off'
                 sh 'ng build'
                 sh 'cp appspec.yml dist'
-                sh 'cp -r scripts'
+                sh 'cp -r scripts dist'
                 sh 'cd dist/angular-app && ls'
 		            sh 'zip -r build.zip dist/angular-app/browser'
             }
